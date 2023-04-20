@@ -17,6 +17,5 @@ import { AuthModule } from './auth/auth.module';
     UsersModule,
     AuthModule,
   ],
-  providers: [AuthService, AuthResolver],
 })
 export class AppModule {}
