@@ -5,6 +5,6 @@ import { User } from './entities/user.entity';
 
 @Module({
   providers: [UsersResolver, UsersService],
-  exports: [User],
+  exports: [UsersService],
 })
 export class UsersModule {}
