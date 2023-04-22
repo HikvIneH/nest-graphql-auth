@@ -10,7 +10,6 @@ input CreateUserInput {
 }
 
 type LoginResponse {
-  access_token: String!
   user: User!
 }
 
@@ -22,12 +21,13 @@ input LoginUserInput {
 type Mutation {
   createUser(createUserInput: CreateUserInput!): User!
   login(loginUserInput: LoginUserInput!): LoginResponse!
+  logout: Boolean!
   removeUser(id: Int!): User!
   updateUser(updateUserInput: UpdateUserInput!): User!
 }
 
 type Query {
-  user(email: String!): User!
+  me: User!
   users: [User!]!
 }
 
